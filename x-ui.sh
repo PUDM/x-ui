@@ -101,7 +101,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://blog.sprov.xyz/x-ui.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/sprov065/x-ui/master/install.sh)
     if [[ $? == 0 ]]; then
         echo -e "${green}更新完成，已自动重启面板${plain}"
         exit 0
@@ -487,7 +487,7 @@ if [[ $# > 0 ]]; then
         ;;
         "log") check_install 0 && show_log 0
         ;;
-        "log") check_install 0 && migrate_v2_ui 0
+        "v2-ui") check_install 0 && migrate_v2_ui 0
         ;;
         "update") check_install 0 && update 0
         ;;
