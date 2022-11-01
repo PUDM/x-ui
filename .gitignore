@@ -6,3 +6,5 @@ dist/
 x-ui-*.tar.gz
 /x-ui
 /release.sh
+.sync*
+main
